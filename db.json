@@ -1,0 +1,25 @@
+{
+  "produits": [
+    {
+      "id": 1,
+      "title": "peintures",
+      "description": "200 x 140 cm",
+      "image": "https://leonart.fr/wp-content/uploads/2019/10/61-800x800.png",
+      "price": 200
+    },
+    {
+      "id": 2,
+      "title": "photographies",
+      "description": "180 x 90 cm",
+      "image": "http://idata.over-blog.com/4/97/51/12/2012/Decembre-2012/Afremov/LEONID_AFREMOV.jpg",
+      "price": 50
+    },
+    {
+      "id": 3,
+      "title": "cartes-postales",
+      "description": "17 x 5 cm",
+      "image": "https://rlv.zcache.fr/carte_postale_almond_blossom-r8e32a84fca604527a9352937fd75fb5d_ucbjp_307.jpg",
+      "price": 10
+    }
+  ]
+}

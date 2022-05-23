@@ -1,0 +1,20 @@
+
+
+
+<!-- /////////////////////CARDS première rangée///////////////////// -->
+ <div class ="row row-cols-1 row-cols-md-3 g-4">
+    <div class="col" *ngFor="let p of produits">
+      <div class="card h-100">
+        <img src={{p.image}} class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">{{p.title}}</h5>
+          <p class="card-text">{{p.description}}</p>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">{{p.price}}</small>
+          <!-- //////////////methode delete avec id de produit en paramètre////// -->
+          <p class="btn btn-primary" (click)="delete(p.id)">delete</p>
+        </div>
+      </div>
+    </div>
+   
