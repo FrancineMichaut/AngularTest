@@ -2,24 +2,54 @@
   "produits": [
     {
       "id": 1,
-      "title": "peintures",
-      "description": "200 x 140 cm",
+      "title": "La pluie",
+      "description": "200 x 140 cm Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero itaque optio molestiae perspiciatis voluptatem atque mollitia odit sit nihil fugit. Placeat saepe, facilis dignissimos illum consequuntur rem minus repellendus accusamus veniam doloremque doloribus maiores accusantium at nam voluptatem natus nesciunt eveniet amet sunt impedit veritatis. Ipsum nam quidem quaerat accusamus?",
       "image": "https://leonart.fr/wp-content/uploads/2019/10/61-800x800.png",
-      "price": 200
+      "price": 99,
+      "categorie" : "peinture à l'huile" 
     },
     {
       "id": 2,
-      "title": "photographies",
-      "description": "180 x 90 cm",
-      "image": "http://idata.over-blog.com/4/97/51/12/2012/Decembre-2012/Afremov/LEONID_AFREMOV.jpg",
-      "price": 50
+      "title": "Dans la vague",
+      "description": "180 x 90 cm Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero itaque optio molestiae perspiciatis voluptatem atque mollitia odit sit nihil fugit. Placeat saepe, facilis dignissimos illum consequuntur rem minus repellendus accusamus veniam doloremque doloribus maiores accusantium at nam voluptatem natus nesciunt eveniet amet sunt impedit veritatis. Ipsum nam quidem quaerat accusamus?",
+      "image": "https://cdn.shopify.com/s/files/1/0113/2557/1136/products/dans-la-vague-intermediaire-paysages-peinture-par-numeros-figuredart-free-shipping-france-574_540x.jpg?v=1636146181",
+      "price": 55 ,
+      "categorie" : "gouache" 
     },
     {
       "id": 3,
-      "title": "cartes-postales",
-      "description": "17 x 5 cm",
+      "title": "Il pleut",
+      "description": "17 x 5 cm Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero itaque optio molestiae perspiciatis voluptatem atque mollitia odit sit nihil fugit. Placeat saepe, facilis dignissimos illum consequuntur rem minus repellendus accusamus veniam doloremque doloribus maiores accusantium at nam voluptatem natus nesciunt eveniet amet sunt impedit veritatis. Ipsum nam quidem quaerat accusamus?",
+
+      "image": "http://idata.over-blog.com/4/97/51/12/2012/Decembre-2012/Afremov/LEONID_AFREMOV.jpg",
+      "price": 10,
+      "categorie" : "peinture à l'huile" 
+      
+    },
+    {
+      "id": 4,
+      "title": "Mon oeil",
+      "description": "200 x 140 cm Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero itaque optio molestiae perspiciatis voluptatem atque mollitia odit sit nihil fugit. Placeat saepe, facilis dignissimos illum consequuntur rem minus repellendus accusamus veniam doloremque doloribus maiores accusantium at nam voluptatem natus nesciunt eveniet amet sunt impedit veritatis. Ipsum nam quidem quaerat accusamus?",
+      "image": "https://cdn.windowsreport.com/wp-content/uploads/sites/3/2021/05/logiciel-de-peinture-numerique-886x590.jpg",
+      "price": 20,
+      "categorie" : "gouache" 
+    },
+    {
+      "id": 5,
+      "title": "La place",
+      "description": "180 x 90 cm Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero itaque optio molestiae perspiciatis voluptatem atque mollitia odit sit nihil fugit. Placeat saepe, facilis dignissimos illum consequuntur rem minus repellendus accusamus veniam doloremque doloribus maiores accusantium at nam voluptatem natus nesciunt eveniet amet sunt impedit veritatis. Ipsum nam quidem quaerat accusamus?",
+      "image": "https://www.pgiroud.fr/flashHigh/538-8F-Aix-Rotonde.jpg",
+      "price": 80,
+      "categorie" : "peinture à l'huile" 
+    },
+    {
+      "id": 6,
+      "title": "Cerisier en fleur",
+      "description": "17 x 5 cm Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero itaque optio molestiae perspiciatis voluptatem atque mollitia odit sit nihil fugit. Placeat saepe, facilis dignissimos illum consequuntur rem minus repellendus accusamus veniam doloremque doloribus maiores accusantium at nam voluptatem natus nesciunt eveniet amet sunt impedit veritatis. Ipsum nam quidem quaerat accusamus?",
       "image": "https://rlv.zcache.fr/carte_postale_almond_blossom-r8e32a84fca604527a9352937fd75fb5d_ucbjp_307.jpg",
-      "price": 10
+      "price": 19,
+      "categorie" : "estampe" 
     }
   ]
 }
+

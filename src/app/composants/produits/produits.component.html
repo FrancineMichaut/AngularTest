@@ -1,20 +1,172 @@
+<div class="p-5">
+<h1>ARTMATEUR</h1>
+</div>
+
+<div class="text-center me-1">
+<h1>Notre sélection d'Oeuvres</h1>
+</div>
 
 
 
-<!-- /////////////////////CARDS première rangée///////////////////// -->
- <div class ="row row-cols-1 row-cols-md-3 g-4">
-    <div class="col" *ngFor="let p of produits">
-      <div class="card h-100">
-        <img src={{p.image}} class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">{{p.title}}</h5>
-          <p class="card-text">{{p.description}}</p>
-        </div>
-        <div class="card-footer">
-          <small class="text-muted">{{p.price}}</small>
-          <!-- //////////////methode delete avec id de produit en paramètre////// -->
-          <p class="btn btn-primary" (click)="delete(p.id)">delete</p>
+<!-- *********** div contenant ma recherche par mot-clef et ma recherche par prix*****************  -->
+
+<div class=" rechercheMotEtPrix float-right px-5">
+  <!-- ****************************** ma recherche par mot clef *****************************  -->
+  <div class=" mb-5">
+    <form class="row g-3" (ngSubmit)="onKeyWord(form.value)" #form="ngForm">
+      <div class="col-auto">
+
+        <input type="text" ngModel name="findByKeyWordtata" class="form-control" placeholder="mot-clef">
+      </div>
+      <div class="col-auto ">
+
+        <button type="submit" class=" btn btn-light mr-2">chercher par mot clef</button>
+      </div>
+    </form>
+  </div>
+
+  
+
+  <!-- *********************   ma recherche par prix ****************** -->
+
+  <div class=" mb-5">
+
+    <form class="row g-3 " (ngSubmit)="onPrice(formi.value)" #formi="ngForm">
+      <div class="col-auto">
+
+        <input type="text" ngModel name="min" class="form-control" placeholder="prix minimum">
+      </div>
+      <div class="col-auto">
+
+        <input type="text" ngModel name="max" class="form-control" placeholder="prix maximum">
+      </div>
+      <div class="col-auto">
+
+        <button type="submit" class="btn btn-light">chercher par prix</button>
+      </div>
+    </form>
+  </div>
+
+  <!-- *************************** fin de ma recherche par prix *******************************  -->
+
+
+</div>
+
+
+<!-- -- ***********  fin de ma div contenant ma recherche par mot-clef et ma recherche par prix*****************  -->
+
+
+
+
+
+
+
+
+
+
+
+<!-- **************************** 3 boutons de catégories et un retour**********************  -->
+
+
+<div class="row">
+
+  <div class="col-1 filtreBouton">
+    <div *ngFor="let c of categories" class="btn btn btn-outline-dark mt-2 w-100"><small (click)="onCategory(c)">{{c}}
+      </small>
+    </div>
+  </div>
+
+
+
+  <!-- /////////////////////CARDS première rangée///////////////////// -->
+  <div class="col-8 cards">
+    <div class="p-5 bg-success" *ngIf="successUpdate">les modifications sont prises en compte avec succès</div>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+      <div class="col" *ngFor="let p of produits; let i =index">
+        <div class="card h-100">
+          <img src={{p.image}} class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">{{p.title}}</h5>
+
+
+<!-- Intérupteur texte minimum et maximum, 2 paragraphes sous condition, up and down***************** -->
+            <!-- <p class="card-text text-muted" *ngIf="toggleDescription && i !== totlDes">{{p.description | slice:0:99}} ... 
+              <i class=" text-success fa-solid fa-angle-down"></i></p>
+              <p class="card-text text-muted" *ngIf="!toggleDescription">{{p.description | slice:0:99}} ... 
+                <i class=" text-success fa-solid fa-angle-down" (click)="ondesc(i)"></i></p>
+              <div *ngIf="i === totlDes ">
+                <p class="card-text text-muted" *ngIf="toggleDescription" (click)="onredesc()">{{p.description}} <i class="fa-solid fa-angle-up"></i></p>
+              </div> -->
+
+
+
+
+
+
+
+
+            
+          <div class="card-footer">
+            <small class="text-muted mr-4">{{p.price}} $</small>
+            <!-- //////////////methode delete avec id de produit en paramètre////// -->
+            <button class="btn btn btn-outline-dark ml-5 mr-5 " (click)="delete(p.id)">delete</button>
+            <!-- methode lié update avec id de produit en paramètre  -->
+
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn btn-outline-dark ml-5 mr-5 " (click)="edit(p)" data-bs-toggle="modal"
+              data-bs-target="#exampleModal">
+              update
+            </button>
+
+            <!-- """"""""""""""""""""""""""""""""""Modal """"""""""""""""""""""""""""""""""""""""""""""""""""""-->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+              aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Formulaire</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <!-- """""""""""""""""""""""""""Formulaire dans modal """""""""""""""""""""""""""""""""""" -->
+                    <form>
+                      <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Titre</label>
+                        <input type="text" name="title" [(ngModel)]="produitAmodifier.title" class="form-control">
+                        <div id="emailHelp" class="form-text"></div>
+                      </div>
+                      <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">Description</label>
+                        <input type="text" name="description" [(ngModel)]="produitAmodifier.description"
+                          class="form-control">
+                      </div>
+                      <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">Image</label>
+                        <input type="text" name="image" [(ngModel)]="produitAmodifier.image" class="form-control">
+                      </div>
+                      <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">Prix</label>
+                        <input type="text" name="price" [(ngModel)]="produitAmodifier.price" class="form-control">
+                      </div>
+                      <button type="submit" class="btn btn-primary">Annuler</button>
+                      <button type="submit" class="btn btn-primary" (click)="savemodification()">Enregistrer</button>
+                    </form>
+                    <!-- :::::::::::::::::::::::::::Fin du formulaire ::::::::::::::::::::::: -->
+
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
         </div>
       </div>
     </div>
-   
+  </div>
+
+
+
+
+</div>
+

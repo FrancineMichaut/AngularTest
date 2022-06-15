@@ -1,0 +1,30 @@
+
+
+
+h2 {
+    text-align: center;
+}
+
+
+
+.filtreBouton {
+  margin: 0 2rem;
+}
+.rechercheMotEtPrix{
+    display: flex!important;
+    flex-direction: column!important;
+    justify-content: end!important;
+    align-items: flex-end;
+}
+
+
+@media screen and (max-width: 1150px) {
+    .filtreBouton {
+      width: 50%;
+      margin: 0 auto !important;
+    }
+  
+    .cards {
+      margin: 5rem auto;
+    }
+  }
